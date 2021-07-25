@@ -1,0 +1,33 @@
+from urllib3 import poolmanager
+from bs4 import BeautifulSoup
+
+def get_soup():
+    cb = poolmanager.PoolManager()
+    html = cb.request("GET","https://en.wikipedia.org/wiki/2020_Summer_Olympics_medal_table")
+    soup = BeautifulSoup(html.data,features="lxml")
+    return soup
+
+import pandas as pd
+import numpy as np
+
+def MedalSoupIntoPandas(soup):
+    df_medals = pd.DataFrame(columns = ["Country","Gold","Silver","Bronze"])
+                             
+    table = soup.find_all("table")[1]
+    trs = table.find_all("tr")
+    for row in trs[1:-1]:
+        tds = row.find_all("td")
+        th = row.find("th")
+        c = th.get_text().replace("*","")[-4:-1]
+        g = tds[-4].get_text()
+        s = tds[-3].get_text()
+        b = tds[-2].get_text()
+        rowdict = {"Country":c,"Gold":g,"Silver":s,"Bronze":b}
+        
+        df_medals = df_medals.append(rowdict,ignore_index=True)
+    return df_medals
+
+if __name__ == "__main__":
+    m = MedalSoupIntoPandas(get_soup())
+    m.to_csv("medals.csv",index=False)
+    print(m)

@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'DIN';
+        src: url('DIN.ttf')  format('truetype'),
+        url('DIN.woff') format('woff') /* Safari, Android, iOS */
+}
+
+table{
+    font-family: 'DIN';
+    width:50vw !important;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:.25%
+}
+
+svg{
+    display: block;
+}
+.Bar{
+    width:70%;
+    padding: 0 !important;
+}
+
+.G{
+    color:gold;
+    fill:gold;
+}
+
+.S{
+    color:rgb(138, 138, 138);
+    fill:rgb(138, 138, 138);
+}
+
+.B{
+    color:goldenrod;
+    fill:goldenrod;
+}
+
+.small{
+    font-size: 18px !important;
+    width:3% !important;
+}
+
+.aes{
+    color: white;
+    background-color:  rgb(0,32,99);
+}
+
+.Total{
+    width:5%;
+    color: rgb(0,32,99);
+    background-color: white;
+}
+
+.Flag{
+    width:2%;
+}
+
+.Country{
+    text-align: center;
+    width:10%;
+}
+
+tr{
+    font-size: 20px;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+}
+
+td{
+    font-size:  20px;
+    padding-left: 5px;
+}
+
+thead{
+    color: rgb(0,32,99);
+    font-size: 20px;
+    text-align: left;
+
+}
+
+th{
+    padding-left: 5px;
+}
+
+th.Total,th.Country{
+    background-color: rgb(0,32,99);
+    color:white;
+}
+
+th.G,th.S,th.B{
+    background-color: rgb(0,32,99);
+}
+
+th.aes{
+    background-color: rgb(0,32,99);
+}
+
+.USA{
+    background-color: rgb(202, 78, 78);
+    color: rgb(43, 43, 107);
+}
+
+.GBR{
+    background-color: rgb(62, 62, 126);
+    color:rgb(197, 55, 55)
+}
+
+.CHN{
+    background-color: rgb(202, 78, 78);
+    color:rgb(255, 255, 151)
+}
+
+.GER{
+    background-color: rgb(90, 31, 31);
+    color:rgb(255, 255, 151)
+}
+
+.KOR{
+    background-color: rgb(255, 255, 255);
+    color: rgb(31, 31, 97);
+}
+
+.JPN{
+    background-color: rgb(255, 255, 255);
+    color:rgb(156, 50, 50);
+}
+
+.ITA{
+    background-color: rgb(255, 255, 255);
+    color:rgb(70, 180, 70);
+}
+
+.AUS{
+    background-color: rgb(29, 75, 29);
+    color:rgb(255, 255, 151);
+}
+
+.NED{
+    background-color: rgb(199, 131, 4);
+}
+
+.FRA{
+    background-color: rgb(62, 62, 126);
+    color:white;
+}
+
+.HUN{
+    background-color: rgb(29, 75, 29);
+    color:rgb(197, 55, 55)
+}
+
+.BRA{
+    background-color:rgb(250, 240, 150);
+    color:  rgb(29, 75, 29);
+}
+
+.ESP{
+    background-color: rgb(255, 246, 167);
+    color:rgb(197, 55, 55)
+}
+
+.KEN{
+    background-color: black;
+    color:rgb(197, 55, 55);
+}
+
+.JAM{
+    background-color: black;
+    color:rgb(255, 248, 151);
+}
+
+.CRO{
+    background-color: whtie;
+    color:brown;
+}
+
+.CUB{
+    background-color: brown;
+    color:white;
+}
+
+.NZL{
+    background-color: black;
+    color:white;
+}
+
+.CAN{
+    background-color: grey;
+    color:white;
+}
+
+.UZB{
+    background-color: rgb(85, 199, 199);
+    color: rgb(29, 75, 29);
+}
+
+.KAZ{
+    background-color: rgb(84, 192, 192);
+    color:gold;
+}
+
+.COL{
+    background-color: rgb(230, 194, 96);
+    color: rgb(31, 31, 97);
+}
+
+.SUI{
+    background-color: rgb(228, 85, 85);
+    color:white;
+}
+
+.IRI{
+    background-color: rgb(29, 75, 29);
+    color: rgb(197, 55, 55);
+}
+
+.GRE{
+    color:rgb(39, 39, 133);
+}
+
+.ARG{
+    background-color:  rgb(85, 199, 199);
+}
+
+.DEN{
+    background-color: rgb(228, 85, 85);
+    color:white;
+}
+
+.SWE{
+    background-color: rgb(62, 62, 126);
+    color:rgb(238, 235, 77);
+}
+
+.RSA{
+    background-color: rgb(45, 114, 45);
+    color:white;
+}
+
+.UKR{
+    color:rgb(88, 88, 202);
+    background-color: rgb(247, 238, 115);
+}
+
