@@ -4,6 +4,10 @@
         url('DIN.woff') format('woff') /* Safari, Android, iOS */
 }
 
+p{
+    font-family: 'DIN';
+}
+
 table{
     font-family: 'DIN';
     width:50vw !important;
