@@ -93,8 +93,6 @@ function tabulate(data){
         }else{
             return d.name;
         }
-       
-
     })
     .filter(function(d){
         return d.name == "Bar"
