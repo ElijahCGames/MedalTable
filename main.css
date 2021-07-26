@@ -55,6 +55,12 @@ svg{
     background-color: white;
 }
 
+.Bottom{
+    background-color: rgb(0,32,99);
+    color:white;
+    text-align: center;
+}
+
 .Flag{
     width:2%;
 }

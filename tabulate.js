@@ -54,7 +54,7 @@ function tabulate(data){
                         return d == "Bar";
                     })
                     .append(function(d){
-                        return createTotalSVG();
+                        return createTotalSVG("#002063");
                     });
 
     var rows = table.append('tbody').selectAll('tr')
@@ -100,6 +100,29 @@ function tabulate(data){
     .append(function(d){
         return createSVG(d.Country);
     });
+
+    var totalrow = table.select('tbody')
+        .append('tr')
+                .attr('class',"Bottom")
+        .selectAll("td")
+        .data(["TOTAL",""
+            ,d3.sum(data,d=>d.G) 
+            ,d3.sum(data,d=>d.S)
+            ,d3.sum(data,d=>d.B)
+            ,d3.sum(data,d=>d.B) + d3.sum(data,d=>d.S) + d3.sum(data,d=>d.G)])
+        .enter()
+        .append("td")
+        .text(function(d){
+            return d
+            })
+        .filter(function(d){
+                        return d == "";
+        })
+        .attr("class","Bar")
+        .append(function(d){
+            return createTotalSVG("#ffffff");
+        });
+
 
     function createSVG(d){
 
@@ -148,7 +171,7 @@ function tabulate(data){
         return kpi;
     }
 
-    function createTotalSVG(){
+    function createTotalSVG(fillC){
         var t = d3.sum(data,d=>d.G)
 
 
@@ -167,7 +190,7 @@ function tabulate(data){
         svg.append('rect').attr({
             width: (t/339) * 100 + "%",
             height:100,
-            fill: "#002063",
+            fill: fillC,
         });
 
         return kpi;
