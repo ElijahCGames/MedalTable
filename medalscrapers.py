@@ -11,18 +11,26 @@ import pandas as pd
 import numpy as np
 
 def MedalSoupIntoPandas(soup):
-    df_medals = pd.DataFrame(columns = ["Country","Gold","Silver","Bronze"])
+    df_medals = pd.DataFrame(columns = ["Rank","Country","Gold","Silver","Bronze"])
                              
     table = soup.find_all("table")[1]
     trs = table.find_all("tr")
+    lr = 1
     for row in trs[1:-1]:
         tds = row.find_all("td")
         th = row.find("th")
         c = th.get_text().replace("*","")[-4:-1]
+        r = int(tds[0].get_text())
+        if (r==0 or (r==1 and lr!=1)):
+            print("Sets")
+            r = lr
+        else:
+            lr = r
+        print(r,lr)
         g = tds[-4].get_text()
         s = tds[-3].get_text()
         b = tds[-2].get_text()
-        rowdict = {"Country":c,"Gold":g,"Silver":s,"Bronze":b}
+        rowdict = {"Rank":r,"Country":c,"Gold":g,"Silver":s,"Bronze":b}
         
         df_medals = df_medals.append(rowdict,ignore_index=True)
     return df_medals

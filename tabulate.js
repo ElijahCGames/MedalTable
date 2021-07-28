@@ -1,6 +1,7 @@
 d3.csv("country.csv",function(ce,cData){
     d3.csv("medals.csv", function(d){
             return{
+            	Rank: +d.Rank, 
                 Country: cData.filter(function(e){
                     console.log(d.Country);
                     return d.Country === e.Code;})[0].Flag + " " + d.Country,
@@ -17,6 +18,11 @@ d3.csv("country.csv",function(ce,cData){
 
 
 function tabulate(data){
+
+	var nested_data = d3.nest().key(function(d){
+		return d.Rank
+	}).entries(data);
+
     var sortAscending = true;
     var table = d3.select('table').attr("class","table table-condensed")
     var titles = d3.keys(data[0]);
@@ -39,7 +45,9 @@ function tabulate(data){
                     })
                     .on('click', function (d) {
                         headers.attr('class', 'header');
-                        
+                        rows.html("");
+                        oldWay();
+
                         if (sortAscending) {
                         rows.sort(function(a, b) { return b[d] < a[d]; });
                         sortAscending = false;
@@ -48,8 +56,7 @@ function tabulate(data){
                         rows.sort(function(a, b) { return b[d] > a[d]; });
                         sortAscending = true;
                         this.className = 'des';
-                        }
-                        
+                        }     
                     }).filter(function(d){
                         return d == "Bar";
                     })
@@ -57,7 +64,49 @@ function tabulate(data){
                         return createTotalSVG("#002063");
                     });
 
-    var rows = table.append('tbody').selectAll('tr')
+    var rows = table.append('tbody')
+
+    nested_data.forEach(function(d) {
+    	var rowspan = d.values.length;
+    	d.values.forEach(function(val,index){
+    		var tr = rows.append("tr").attr("class",function(){
+    			return val.Country
+    		});
+    		if(index==0){
+    			tr.append("td")
+    			.attr("rowspan",rowspan)
+    			.text(val.Rank)
+    			.attr("class","Rank")
+    		}
+    		tr.append("td").text(val.Country).attr("class","Country")
+    			.attr("class",function(){
+    				return val.Country
+    			})
+    			.attr("id",function(){
+    				return val.Country;
+    			});
+    		tr.append("td").attr("class","Bar").append(function(d){
+        			return createSVG(val.Country);
+    			});
+    		tr.append("td").text(val.G)
+    			.attr('data-th',"G")
+    			.attr("class","small G");
+    		tr.append("td").text(val.S)
+    			.attr('data-th',"S")
+    			.attr("class","small S");
+    		tr.append("td").text(val.B)
+    			.attr('data-th',"B")
+    			.attr("class","small B");
+    		tr.append("td").text(val.Total)
+    			.attr('data-th',"Total")
+    			.attr("class","Total");
+    	});
+    });
+
+    nested_data.sort(function(a, b) { return b.g> a.G; });
+    tr();
+    function oldWay(){
+    	rows = table.append('tbody').selectAll('tr')
                 .data(data).enter()
                 .append('tr')
                 .attr("class",function(d){
@@ -101,7 +150,10 @@ function tabulate(data){
         return createSVG(d.Country);
     });
 
-    var totalrow = table.select('tbody')
+    }
+    
+    function tr(){
+    	 var totalrow = table.select('tbody')
         .append('tr')
                 .attr('class',"Bottom")
         .selectAll("td")
@@ -112,17 +164,25 @@ function tabulate(data){
             ,d3.sum(data,d=>d.B) + d3.sum(data,d=>d.S) + d3.sum(data,d=>d.G)])
         .enter()
         .append("td")
+          
         .text(function(d){
             return d
             })
+        .attr("colspan",function(d){
+        	if(d == "TOTAL"){
+        		return 2
+        	}
+        })
         .filter(function(d){
                         return d == "";
         })
+
         .attr("class","Bar")
         .append(function(d){
             return createTotalSVG("#ffffff");
         });
-
+    }
+   
 
     function createSVG(d){
 
