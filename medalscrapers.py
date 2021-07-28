@@ -13,7 +13,7 @@ import numpy as np
 def MedalSoupIntoPandas(soup):
     df_medals = pd.DataFrame(columns = ["Rank","Country","Gold","Silver","Bronze"])
                              
-    table = soup.find_all("table")[1]
+    table = soup.find_all("table")[2]
     trs = table.find_all("tr")
     lr = 1
     for row in trs[1:-1]:
