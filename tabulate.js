@@ -1,16 +1,16 @@
 d3.csv("country.csv",function(ce,cData){
     d3.csv("medals.csv", function(d){
+            coun = cData.filter(function(e){
+                    console.log(d.Country);
+                    return d.Country === e.Name;})
             return{
             	Rank: +d.Rank, 
-                Country: cData.filter(function(e){
-                    console.log(d.Country);
-                    return d.Country === e.Code;})[0].Flag + " " + d.Country,
+                Country: coun[0].Flag + " " + coun[0].Code,
                 Bar: null,
                 G: +d.Gold,
                 S: +d.Silver,
                 B: +d.Bronze,
                 Total: d3.sum([d.Gold,d.Bronze,d.Silver])
-
             };
         },       
     tabulate);
@@ -38,7 +38,7 @@ function tabulate(data){
                         if(d == "Flag"){
                             return " ";
                         }
-                        return d.toUpperCase();
+                        return d;
                     })
                     .attr("class", function(d){
                         return d;
@@ -61,7 +61,7 @@ function tabulate(data){
                         return d == "Bar";
                     })
                     .append(function(d){
-                        return createTotalSVG("#002063");
+                        return createTotalSVG("#527dda");
                     });
 
     var rows = table.append('tbody')
@@ -232,7 +232,7 @@ function tabulate(data){
     }
 
     function createTotalSVG(fillC){
-        var t = d3.sum(data,d=>d.G)
+        var t = d3.sum(data,d=>d.S)
 
 
         w = "100%";
@@ -248,7 +248,7 @@ function tabulate(data){
 
 
         svg.append('rect').attr({
-            width: (t/339) * 100 + "%",
+            width: (t/109) * 100 + "%",
             height:100,
             fill: fillC,
         });

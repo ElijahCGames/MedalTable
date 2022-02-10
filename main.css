@@ -4,16 +4,20 @@
         url('DIN.woff') format('woff') /* Safari, Android, iOS */
 }
 
+body{
+    background-color: #36393E !important;
+}
 p{
-    font-family: 'DIN';
+    font-family: 'Helvetica';
 }
 
 table{
-    font-family: 'DIN';
+    font-family: 'Helvetica';
     width:50vw !important;
     margin-left: auto;
     margin-right:auto;
-    margin-top:.25%
+    margin-top:.25%;
+    background-color: white !important;
 }
 
 svg{
@@ -35,8 +39,9 @@ svg{
 }
 
 .B{
-    color:goldenrod;
-    fill:goldenrod;
+    color: rgb(205,127,50);
+    fill: rgb(205,127,50);
+
 }
 
 
@@ -48,23 +53,23 @@ svg{
 
 .aes{
     color: white;
-    background-color:  rgb(0,32,99);
+    background-color:  rgb(82, 125, 218);
 }
 
 .Total{
     width:5%;
-    color: rgb(0,32,99);
+    color: rgb(82, 125, 218);
     background-color: white;
 }
 
 .Bottom{
-    background-color: rgb(0,32,99);
+    background-color: rgb(82, 125, 218);
     color:white;
     text-align: center;
 }
 .Rank{
     text-align: center;
-    background-color: rgb(0,32,99);
+    background-color: rgb(82, 125, 218);
     color:white;
     vertical-align: middle !important;
 }
@@ -94,7 +99,7 @@ td + td + td{
 }
 
 thead{
-    color: rgb(0,32,99);
+    color: rgb(82, 125, 218);
     font-size: 20px;
     text-align: left;
 
@@ -105,22 +110,22 @@ th{
 }
 
 th.Total,th.Country, th.Rank{
-    background-color: rgb(0,32,99) !important;
+    background-color: rgb(82, 125, 218) !important;
     color:white;
 }
 
 
 th.G,th.S,th.B{
-    background-color: rgb(0,32,99);
+    background-color: rgb(82, 125, 218);
 }
 
 th.aes{
-    background-color: rgb(0,32,99);
+    background-color: rgb(82, 125, 218);
 }
 
 .USA{
-    background-color: rgb(202, 78, 78);
-    color: rgb(43, 43, 107);
+    background-color: rgb(201, 48, 48);
+    color: rgb(54, 54, 179);
 }
 
 .GBR{
@@ -129,7 +134,7 @@ th.aes{
 }
 
 .CHN{
-    background-color: rgb(202, 78, 78);
+    background-color: rgb(201, 48, 48);
     color:rgb(255, 255, 151)
 }
 
@@ -149,26 +154,26 @@ th.aes{
 }
 
 .ITA{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(201, 48, 48);
     color:rgb(70, 180, 70);
 }
 
 .AUS{
-    background-color: rgb(29, 75, 29);
+    background-color: rgb(37, 138, 37);
     color:rgb(255, 255, 151);
 }
 
 .NED{
-    background-color: rgb(199, 131, 4);
+    background-color: rgb(253, 167, 68);
 }
 
 .FRA{
-    background-color: rgb(62, 62, 126);
+    background-color: rgb(54, 54, 179);
     color:white;
 }
 
 .HUN{
-    background-color: rgb(29, 75, 29);
+    background-color: rgb(37, 138, 37);
     color:rgb(197, 55, 55)
 }
 
@@ -208,7 +213,7 @@ th.aes{
 }
 
 .CAN{
-    background-color: grey;
+    background-color: rgb(201, 48, 48);
     color:white;
 }
 
@@ -228,7 +233,7 @@ th.aes{
 }
 
 .SUI{
-    background-color: rgb(228, 85, 85);
+    background-color: rgb(168, 60, 60);
     color:white;
 }
 
@@ -246,12 +251,12 @@ th.aes{
 }
 
 .DEN{
-    background-color: rgb(228, 85, 85);
+    background-color: rgb(201, 48, 48);
     color:white;
 }
 
 .SWE{
-    background-color: rgb(62, 62, 126);
+    background-color: rgb(54, 54, 179);
     color:rgb(238, 235, 77);
 }
 
@@ -265,3 +270,21 @@ th.aes{
     background-color: rgb(247, 238, 115);
 }
 
+.NOR{
+    background-color: rgb(201, 48, 48);
+    color: rgb(62, 62, 126);
+}
+
+.SLO{
+    color: rgb(62, 62, 126);
+}
+
+.AUT{
+    background-color: rgb(90, 31, 31);
+    color: rgb(202, 78, 78);
+}
+
+.ROC{
+    background-color: black;
+    color:white;
+}

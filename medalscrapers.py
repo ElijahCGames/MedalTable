@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 def get_soup():
     cb = poolmanager.PoolManager()
-    html = cb.request("GET","https://en.wikipedia.org/wiki/2020_Summer_Olympics_medal_table")
+    html = cb.request("GET","https://en.wikipedia.org/wiki/2022_Winter_Olympics_medal_table")
     soup = BeautifulSoup(html.data,features="lxml")
     return soup
 
@@ -13,13 +13,13 @@ import numpy as np
 def MedalSoupIntoPandas(soup):
     df_medals = pd.DataFrame(columns = ["Rank","Country","Gold","Silver","Bronze"])
                              
-    table = soup.find_all("table")[1]
+    table = soup.find_all("table")[2]
     trs = table.find_all("tr")
     lr = 1
     for row in trs[1:-1]:
         tds = row.find_all("td")
         th = row.find("th")
-        c = th.get_text().replace("*","")[-4:-1]
+        c = th.get_text().replace("*","")[1:]
         r = int(tds[0].get_text())
         if (r==0 or (r==1 and lr!=1)):
             print("Sets")
