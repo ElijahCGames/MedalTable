@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 
 def get_soup():
     cb = poolmanager.PoolManager()
-    html = cb.request("GET","https://en.wikipedia.org/wiki/2022_Winter_Olympics_medal_table")
-    soup = BeautifulSoup(html.data,features="lxml")
+    html = cb.request("GET","https://en.wikipedia.org/wiki/2024_Summer_Olympics_medal_table")
+    soup = BeautifulSoup(html.data)
     return soup
 
 import pandas as pd
@@ -13,8 +13,10 @@ import numpy as np
 def MedalSoupIntoPandas(soup):
     df_medals = pd.DataFrame(columns = ["Rank","Country","Gold","Silver","Bronze"])
                              
-    table = soup.find_all("table")[2]
+    table = soup.find_all("table")[3]
+    print(table)
     trs = table.find_all("tr")
+
     lr = 1
     for row in trs[1:-1]:
         tds = row.find_all("td")
@@ -32,7 +34,7 @@ def MedalSoupIntoPandas(soup):
         b = tds[-2].get_text()
         rowdict = {"Rank":r,"Country":c,"Gold":g,"Silver":s,"Bronze":b}
         
-        df_medals = df_medals.append(rowdict,ignore_index=True)
+        df_medals = pd.concat([df_medals, pd.DataFrame([rowdict])])
     return df_medals
 
 if __name__ == "__main__":

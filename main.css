@@ -1,18 +1,22 @@
 @font-face {
-    font-family: 'DIN';
-        src: url('DIN.ttf')  format('truetype'),
-        url('DIN.woff') format('woff') /* Safari, Android, iOS */
+    font-family: 'Paris2024-Variable';
+        src: url('Paris2024-Variable.ttf')  format('truetype'),
+}
+
+:root{
+    --table-color: #331362;
+    --rank-color: #d179ca;
 }
 
 body{
-    background-color: #36393E !important;
+    background-color: #331362 !important;
 }
 p{
-    font-family: 'Helvetica';
+    font-family: 'Paris2024-Variable';
 }
 
 table{
-    font-family: 'Helvetica';
+    font-family: 'Paris2024-Variable';
     width:50vw !important;
     margin-left: auto;
     margin-right:auto;
@@ -25,13 +29,13 @@ svg{
 }
 .Bar{
     padding: 0 !important;
+    color: var(--table-color);
 }
 
 .G{
     color:gold;
     fill:gold;
 }
-
 
 .S{
     color:rgb(138, 138, 138);
@@ -41,10 +45,7 @@ svg{
 .B{
     color: rgb(205,127,50);
     fill: rgb(205,127,50);
-
 }
-
-
 
 .small{
     font-size: 18px !important;
@@ -53,26 +54,27 @@ svg{
 
 .aes{
     color: white;
-    background-color:  rgb(82, 125, 218);
+    background-color:  var(--table-color);
 }
 
 .Total{
     width:5%;
-    color: rgb(82, 125, 218);
+    color: var(--table-color);
     background-color: white;
 }
 
 .Bottom{
-    background-color: rgb(82, 125, 218);
+    background-color: var(--table-color);
     color:white;
     text-align: center;
 }
 .Rank{
     text-align: center;
-    background-color: rgb(82, 125, 218);
+    background-color: var(--rank-color);
     color:white;
     vertical-align: middle !important;
 }
+
 .Flag{
     width:2%;
 }
@@ -99,7 +101,7 @@ td + td + td{
 }
 
 thead{
-    color: rgb(82, 125, 218);
+    color: var(--table-color);
     font-size: 20px;
     text-align: left;
 
@@ -110,17 +112,16 @@ th{
 }
 
 th.Total,th.Country, th.Rank{
-    background-color: rgb(82, 125, 218) !important;
+    background-color: var(--table-color) !important;
     color:white;
 }
 
-
 th.G,th.S,th.B{
-    background-color: rgb(82, 125, 218);
+    background-color: var(--table-color)
 }
 
 th.aes{
-    background-color: rgb(82, 125, 218);
+    background-color: var(--table-color)
 }
 
 .USA{
