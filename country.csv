@@ -50,11 +50,11 @@ CUB,🇨🇺
 CYP,🇨🇾
 CZE,🇨🇿,Czech Republic
 DEN,🇩🇰,Denmark
-DJI,🇩🇯
+DJI,🇩🇯,Djibouti
 DMA,🇩🇲
 DOM,🇩🇴
-ECU,🇪🇨
-EGY,🇪🇬
+ECU,🇪🇨,Ecuador
+EGY,🇪🇬,Egypt
 ERI,🇪🇷
 ESA,🇸🇻
 ESP,🇪🇸,Spain
@@ -79,26 +79,26 @@ HAI,🇭🇹
 HKG,🇭🇰,Hong Kong
 HON,🇭🇳
 HUN,🇭🇺,Hungary
-INA,🇮🇩
-IND,🇮🇳
-IRI,🇮🇷
-IRL,🇮🇪
-IRQ,🇮🇶
-ISL,🇮🇸
-ISR,🇮🇱
+INA,🇮🇩,Indonesia
+IND,🇮🇳,India
+IRI,🇮🇷,Iran
+IRL,🇮🇪,Ireland
+IRQ,🇮🇶,Iraq
+ISL,🇮🇸,Iceland
+ISR,🇮🇱,Israel
 ISV,🇻🇮
 ITA,🇮🇹,Italy
 IVB,🇻🇬
-JAM,🇯🇲
-JOR,🇯🇴
+JAM,🇯🇲,Jamaica 
+JOR,🇯🇴,Jordan
 JPN,🇯🇵,Japan
 KAZ,🇰🇿,Kazakhstan
-KEN,🇰🇪
+KEN,🇰🇪,Kenya
 KGZ,🇰🇬
 KIR,🇰🇮
 KOR,🇰🇷,South Korea
-KOS,🇽🇰
-KSA,🇸🇦
+KOS,🇽🇰,Kosovo
+KSA,🇸🇦,Saudi Arabia
 KUW,🇰🇼
 LAO,🇱🇦
 LAT,🇱🇻,Latvia
@@ -108,12 +108,12 @@ LBR,🇱🇷
 LES,🇱🇸
 LIE,🇱🇮
 LTU,🇱🇹
-LUX,🇱🇺
+LUX,🇱🇺,Luxembourg
 MAD,🇲🇬
 MAR,🇲🇦
 MAS,🇲🇾
 MAW,🇲🇼
-MDA,🇲🇩
+MDA,🇲🇩,Moldova
 MDV,🇲🇻
 MEX,🇲🇽,Mexico
 MGL,🇲🇳,Mongolia
@@ -193,7 +193,7 @@ UGA,🇺🇬
 UKR,🇺🇦
 URU,🇺🇾
 USA,🇺🇸,United States
-UZB,🇺🇿
+UZB,🇺🇿,Uzbekistan
 VAN,🇻🇺
 VEN,🇻🇪
 VIE,🇻🇳

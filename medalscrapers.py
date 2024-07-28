@@ -14,7 +14,6 @@ def MedalSoupIntoPandas(soup):
     df_medals = pd.DataFrame(columns = ["Rank","Country","Gold","Silver","Bronze"])
                              
     table = soup.find_all("table")[3]
-    print(table)
     trs = table.find_all("tr")
 
     lr = 1
