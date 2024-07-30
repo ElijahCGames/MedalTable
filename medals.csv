@@ -1,29 +1,37 @@
 Rank,Country,Gold,Silver,Bronze
-1,Japan,4,2,1
-2,Australia,4,2,0
-3,United States,3,6,3
-4,France,3,3,2
-5,South Korea,3,2,1
-6,China,3,1,2
-7,Italy,1,2,3
-8,Kazakhstan,1,0,2
-9,Belgium,1,0,1
-10,Germany,1,0,0
-10,Hong Kong,1,0,0
-10,Uzbekistan,1,0,0
-13,Great Britain,0,2,2
-14,Brazil,0,1,2
-15,Canada,0,1,1
-16,Fiji,0,1,0
-16,Kosovo,0,1,0
-16,Mongolia,0,1,0
-16,Poland,0,1,0
-16,Tunisia,0,1,0
-21,Sweden,0,0,2
-22,Egypt,0,0,1
-22,Hungary,0,0,1
-22,India,0,0,1
-22,Mexico,0,0,1
-22,Moldova,0,0,1
-22,South Africa,0,0,1
-22,Spain,0,0,1
+1,Japan,6,2,4
+2,France,5,8,3
+3,China,5,5,2
+4,Australia,5,4,0
+5,South Korea,5,3,1
+6,United States,3,8,9
+7,Great Britain,2,5,3
+8,Italy,2,3,3
+9,Canada,2,1,2
+10,Hong Kong,2,0,1
+11,Germany,2,0,0
+12,Kazakhstan,1,0,2
+12,South Africa,1,0,2
+14,Belgium,1,0,1
+15,Azerbaijan,1,0,0
+15,Romania,1,0,0
+15,Uzbekistan,1,0,0
+18,Brazil,0,1,2
+18,Sweden,0,1,2
+20,Fiji,0,1,0
+20,Kosovo,0,1,0
+20,Mongolia,0,1,0
+20,Poland,0,1,0
+20,Tunisia,0,1,0
+25,Moldova,0,0,2
+26,Croatia,0,0,1
+26,Egypt,0,0,1
+26,Hungary,0,0,1
+26,India,0,0,1
+26,Ireland,0,0,1
+26,Mexico,0,0,1
+26,Slovakia,0,0,1
+26,Spain,0,0,1
+26,Switzerland,0,0,1
+26,Turkey,0,0,1
+26,Ukraine,0,0,1
